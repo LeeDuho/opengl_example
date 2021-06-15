@@ -6,12 +6,14 @@ ContextUPtr Context::Create() {
     auto context = ContextUPtr(new Context());
     if (!context->Init())
         return nullptr;
+
     return std::move(context);
 }
 
 void Context::ProcessInput(GLFWwindow* window) {
     if (!m_cameraControl)
         return;
+
     const float cameraSpeed = 0.05f;
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
         m_cameraPos += cameraSpeed * m_cameraFront;
