@@ -43,7 +43,7 @@ private:
     };
     std::vector<Light> m_lights;
     bool m_useIBL { true };
-    
+
     struct Material {
         glm::vec3 albedo { glm::vec3(1.0f, 1.0f, 1.0f) };
         float roughness { 0.5f };
@@ -62,7 +62,6 @@ private:
     ProgramUPtr m_preFilteredProgram;
     TexturePtr m_brdfLookupMap;
     ProgramUPtr m_brdfLookupProgram;
-
 
     // screen size
     int m_width {640};
