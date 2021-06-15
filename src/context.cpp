@@ -291,5 +291,4 @@ void Context::DrawScene(const glm::mat4& view,
         m_sphere->Draw(program);
         }
     }
-
 }
